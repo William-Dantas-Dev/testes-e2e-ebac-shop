@@ -9,12 +9,18 @@ context('Exercicio - Testes End-to-end - Fluxo de pedido', () => {
         Preenchendo todas opções no checkout
         E validando minha compra ao final */
 
+    before(() => {
+        cy.fixture('perfil').then(perfil => {
+            dadosLogin = perfil
+        })
+    });
     beforeEach(() => {
-        cy.visit('/')
+        cy.visit('')
+        
     });
 
-    it('Deve fazer um pedido na loja Ebac Shop de ponta a ponta', () => {
-        //TODO 
+    it.only('Deve fazer um pedido na loja Ebac Shop de ponta a ponta', () => {
+        
     });
 
 
